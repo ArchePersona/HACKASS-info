@@ -94,6 +94,24 @@ HACKASS is the thing that makes the hackathon entry format look primitive.
 
 It is software creation without asking the hackathon model for access, validation, timing, or permission.
 
+## Documentation
+
+Supporting documentation is available in [`docs/`](./docs/):
+
+- [Premise](./docs/PREMISE.md)
+- [Product](./docs/PRODUCT.md)
+- [Workflow](./docs/WORKFLOW.md)
+- [Market Attack](./docs/MARKET_ATTACK.md)
+- [IP and Licensing](./docs/IP_AND_LICENSING.md)
+
+## License
+
+For now, HACKASS keeps the IP.
+
+This repository is currently proprietary. Public visibility does not grant permission to copy, modify, distribute, host, deploy, train on, or create derivative works from the project.
+
+See [`LICENSE`](./LICENSE).
+
 ## Public thesis
 
 HACKASS exists to kill the reason hackathons matter.
