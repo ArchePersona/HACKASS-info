@@ -35,6 +35,16 @@ That model only matters while ordinary people still need the stage in order to b
 
 HACKASS removes the stage.
 
+## What HACKASS is
+
+HACKASS is the user-facing software-creation program.
+
+It is the part the human communicates with.
+
+The user does not need to think like an engineer. They describe what they want built in ordinary language. HACKASS carries the conversation, asks for decisions when they materially matter, and turns human intent into software direction.
+
+HACKASS is not the engineering engine and it is not the local-machine execution layer. Those responsibilities are deliberately separated.
+
 ## What HACKASS does
 
 HACKASS lets anyone make software by telling it what kind of app they want.
@@ -45,8 +55,42 @@ The user does not need to enter a contest so someone else can decide whether the
 
 They describe the app.
 HACKASS interviews them when decisions matter.
-HACKASS turns intent into requirements, structure, build direction, and implementation plan.
-HACKASS walks the user toward software.
+HACKASS turns intent into requirements, structure, build direction, and implementation work.
+HACKASS remains the human-facing surface while the engineering stack underneath it does the specialized work.
+
+## The stack underneath HACKASS
+
+```text
+Human
+  ↓
+HACKASS
+  human intent / conversation / product decisions
+  ↓
+ARCHESTRATOR
+  engineering plan / work / execution state / verification
+  ↓
+ROSIE
+  local-machine bridge / translation / controlled local action
+  ↓
+Local machine
+  files / repository / shell / tools / runtime
+```
+
+### ARCHESTRATOR
+
+ARCHESTRATOR is the engineering engine.
+
+It turns approved product intent into an inspectable engineering process: planning, work orders, execution, verification, state, continuation, and the record of what actually happened.
+
+### ROSIE
+
+ROSIE is the local-machine bridge/runtime.
+
+Its job is to translate authorized engineering actions into operations the user's machine can actually perform: inspecting and changing files, reading Git state, running commands, and interacting with the local workspace under explicit execution boundaries.
+
+ROSIE does not replace ARCHESTRATOR. ARCHESTRATOR manages the engineering process; ROSIE gives that process a controlled path to the machine where the work lives.
+
+See [Architecture](./docs/ARCHITECTURE.md).
 
 ## Why that makes hackathons pointless
 
@@ -88,7 +132,7 @@ Now the builder is coming for the filter.
 
 ## Position
 
-HACKASS is not a hackathon entry.
+HACKASS is not a hackathon helper.
 
 HACKASS is the thing that makes the hackathon entry format look primitive.
 
@@ -101,6 +145,7 @@ Supporting documentation is available in [`docs/`](./docs/):
 - [Premise](./docs/PREMISE.md)
 - [Product](./docs/PRODUCT.md)
 - [Workflow](./docs/WORKFLOW.md)
+- [Architecture](./docs/ARCHITECTURE.md)
 - [Market Attack](./docs/MARKET_ATTACK.md)
 - [IP and Licensing](./docs/IP_AND_LICENSING.md)
 
