@@ -1,8 +1,6 @@
 # Workflow
 
-HACKASS turns ordinary intent into software direction.
-
-It does not begin by asking the user to think like an engineer.
+HACKASS turns ordinary intent into software work without asking the user to think like an engineer.
 
 It begins by letting the user say what they want built.
 
@@ -41,27 +39,56 @@ HACKASS identifies:
 - the first useful version;
 - the boundaries between must-have and later.
 
-## 4. Build direction
+## 4. Engineering handoff
 
-HACKASS turns the shaped product into a buildable direction:
+Once the material product decisions are established, HACKASS hands the approved build intent to ARCHESTRATOR.
 
-- requirements;
-- app structure;
-- screen map;
-- data model direction;
-- integration needs;
-- deployment path;
-- implementation sequence;
-- validation checklist.
+ARCHESTRATOR is the engineering engine. It owns the structured build process around that intent: planning, work organization, execution state, verification, continuation, and the record of what happened.
 
-## 5. Software path
+HACKASS remains the user-facing surface. The user should not have to manually operate ARCHESTRATOR in order to use the product.
 
-The outcome is not ceremony.
+## 5. Local execution
 
-The outcome is movement toward working software.
+When engineering work must reach the user's machine, ROSIE provides the local bridge/runtime.
+
+ROSIE translates authorized engineering actions into operations available on the local machine, including:
+
+- workspace discovery;
+- file inspection and modification;
+- Git inspection;
+- shell execution; and
+- other bounded local actions exposed through its tool layer.
+
+The responsibility split is deliberate:
+
+```text
+HACKASS      understands and carries human intent
+ARCHESTRATOR manages the engineering process
+ROSIE        translates authorized work into local-machine action
+```
+
+## 6. Software path
+
+The outcome is not a plan sitting in a conversation.
+
+The outcome is movement from human intent through engineering work toward running software.
+
+```text
+Human intent
+  ↓
+HACKASS
+  ↓
+ARCHESTRATOR
+  ↓
+ROSIE
+  ↓
+Local machine
+  ↓
+Working software
+```
 
 The user does not need a hackathon stage to begin.
 
-The user needs a system that can translate intent into buildable form.
+The user needs a system that can carry intent all the way into software.
 
 That is HACKASS.
